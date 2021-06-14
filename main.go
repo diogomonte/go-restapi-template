@@ -75,10 +75,10 @@ func getEnvOrDefault(key string, defaultValue string) string {
 }
 
 func main() {
-	log.Println("-- Running device Registry Service --")
+	log.Println("-- Running template --")
 	app := App{}
 	app.Initialize(
 		getEnvOrDefault("API_KEY", ""),
-		getEnvOrDefault("MYSQL_URL", "root:root@tcp(mysql:3306)/device_registry?charset=utf8&parseTime=True&loc=Local"))
+		getEnvOrDefault("MYSQL_URL", "root:root@tcp(mysql:3306)/my_db?charset=utf8&parseTime=True&loc=Local"))
 	app.Run(getEnvOrDefault("PORT", "8082"))
 }
