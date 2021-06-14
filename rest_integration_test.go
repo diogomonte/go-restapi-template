@@ -46,7 +46,7 @@ func TestMain(m *testing.M) {
 	os.Exit(code)
 }
 
-func TestHttpSaveDevice(t *testing.T) {
+func TestHttpHelloWorld(t *testing.T) {
 
 	req, _ := http.NewRequest("POST", "/helloworld", bytes.NewBuffer([]byte("")))
 	req.Header.Set("Content-Type", "application/json")
